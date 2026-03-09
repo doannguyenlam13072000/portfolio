@@ -20,16 +20,15 @@ function isActive(href: string) {
     <button
       type="button"
       class="nav-toggle"
-      aria-label="Toggle menu"
+      aria-label="Open menu"
       aria-expanded="false"
       aria-controls="nav-menu"
     >
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
+      <img src="/images/hamburger.svg" alt="" class="nav-toggle-icon nav-toggle-icon--menu" width="24" height="24" />
+      <img src="/images/times.svg" alt="" class="nav-toggle-icon nav-toggle-icon--close" width="24" height="24" />
     </button>
     <nav class="nav" id="nav-menu" aria-label="Main navigation">
-      <a href="#hero" class="nav-brand">Portfolio</a>
+      <a href="#hero" class="nav-brand">Lam Doan</a>
       <ul class="nav-list">
         {
           navLinks.map((item) => (
@@ -51,13 +50,48 @@ function isActive(href: string) {
 <div class="nav-spacer" aria-hidden="true"></div>
 
 <script>
-  function setActiveNav() {
+  const SECTION_IDS = ["hero", "features", "skills", "experiences"];
+
+  function setActiveNavByHash() {
     const hash = window.location.hash || "#hero";
     const links = document.querySelectorAll(".nav-link");
     links.forEach((link) => {
       const href = link.getAttribute("href") || "";
       const isActive = href === hash || (hash === "#hero" && href === "#hero");
       link.classList.toggle("active", isActive);
+    });
+  }
+
+  function getSectionInView() {
+    const scrollY = window.scrollY ?? window.pageYOffset;
+    const trigger = scrollY + window.innerHeight * 0.35;
+    let activeId = "hero";
+    for (const id of SECTION_IDS) {
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= trigger) {
+        activeId = id;
+      }
+    }
+    return activeId;
+  }
+
+  function setActiveNavByScroll() {
+    const activeId = getSectionInView();
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach((link) => {
+      const href = link.getAttribute("href") || "";
+      const id = href.slice(1);
+      link.classList.toggle("active", id === activeId);
+    });
+  }
+
+  let scrollTicking = false;
+  function onScroll() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(() => {
+      setActiveNavByScroll();
+      scrollTicking = false;
     });
   }
 
@@ -70,12 +104,14 @@ function isActive(href: string) {
     function closeMenu() {
       wrapper?.classList.remove("nav-open");
       toggle?.setAttribute("aria-expanded", "false");
+      toggle?.setAttribute("aria-label", "Open menu");
       document.body.classList.remove("nav-menu-open");
     }
 
     function openMenu() {
       wrapper?.classList.add("nav-open");
       toggle?.setAttribute("aria-expanded", "true");
+      toggle?.setAttribute("aria-label", "Close menu");
       document.body.classList.add("nav-menu-open");
     }
 
@@ -95,12 +131,17 @@ function isActive(href: string) {
     });
 
     window.addEventListener("resize", () => {
-      setActiveNav();
+      setActiveNavByScroll();
       if (window.matchMedia("(min-width: 768px)").matches) closeMenu();
     });
   }
 
-  setActiveNav();
-  window.addEventListener("hashchange", setActiveNav);
+  if (window.location.hash) {
+    setActiveNavByHash();
+  } else {
+    setActiveNavByScroll();
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("hashchange", setActiveNavByHash);
   initNav();
 </script>

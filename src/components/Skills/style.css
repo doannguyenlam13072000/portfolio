@@ -1,4 +1,5 @@
 .skills-section {
+    overflow-x: hidden; /* Prevent right-side space during GSAP x animation */
     .skills-container {
         display: flex;
         align-items: center;

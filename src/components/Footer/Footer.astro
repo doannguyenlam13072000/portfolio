@@ -2,7 +2,7 @@
 import { socialLinks } from "../../scripts/dummy";
 ---
 
-<footer class="footer-section bg-card-bg rounded-2xl p-8">
+<footer class="footer-section bg-card-bg rounded-2xl rounded-bl-none rounded-br-none p-8">
   <div class="grid grid-cols-3 gap-4 container mx-auto px-4 md:px-8">
     <div class="left-side col-span-3 md:col-span-1">
       <h3 class="text-headline text-2xl font-bold text-center md:text-left">
@@ -10,7 +10,10 @@ import { socialLinks } from "../../scripts/dummy";
       </h3>
     </div>
     <div class="center-side col-span-3 md:col-span-1">
-      <p class="text-center text-paragraph">Copyright 2026 Lam Doan</p>
+      <p class="text-center text-paragraph flex items-center justify-center gap-1.5">
+        <img src="/images/copyright.svg" alt="" class="w-4 h-4 inline-block" aria-hidden="true" />
+        Copyright 2026 Lam Doan
+      </p>
     </div>
     <div class="right-side col-span-3 md:col-span-1">
       <ul class="flex items-center justify-center md:justify-end gap-4">
@@ -18,7 +21,7 @@ import { socialLinks } from "../../scripts/dummy";
           socialLinks.map((link) => (
             <li>
               <a href={link.url} target="_blank" rel="noopener noreferrer">
-                <img src={link.icon} alt={link.name} class="w-6 h-6" />
+                <img src={link.icon} alt={link.name} class="w-6 h-6" loading="lazy" />
               </a>
             </li>
           ))

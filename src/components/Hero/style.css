@@ -55,7 +55,7 @@
     .slide {
         display: inline-block;
         vertical-align: top;
-        height: 3rem;
+        height: 2.5rem;
         /* one row: icon + text (match md:size-10 + padding) */
         overflow: hidden;
         transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
