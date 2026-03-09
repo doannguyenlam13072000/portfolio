@@ -337,3 +337,12 @@ body.nav-menu-open {
 #contact {
   scroll-margin-top: 6.5rem;
 }
+
+@media (max-width: 767px) {
+  #features,
+  #skills,
+  #experiences,
+  #contact {
+    scroll-margin-top: 1rem;
+  }
+}
