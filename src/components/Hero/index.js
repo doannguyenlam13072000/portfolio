@@ -43,5 +43,12 @@ function runHeroAnimation() {
 
 const heroSection = document.querySelector(".hero-section");
 if (heroSection) {
-  observeViewport([heroSection], () => runHeroAnimation(), { threshold: 0.2 });
+  const observer = observeViewport(
+    [heroSection],
+    (entry) => {
+      runHeroAnimation();
+      observer.unobserve(entry.target);
+    },
+    { threshold: 0.2 }
+  );
 }
