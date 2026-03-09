@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
     "@astrojs/ts-plugin": "^1.10.6",
     "@splinetool/loader": "^1.12.61",
     "@tailwindcss/vite": "^4.2.1",
