@@ -225,3 +225,11 @@ body.nav-menu-open {
 .nav-spacer {
   height: 4.5rem;
 }
+
+/* Offset scroll target so content is not hidden under the fixed navbar */
+#features,
+#skills,
+#experiences,
+#contact {
+  scroll-margin-top: 7rem;
+}

@@ -18,7 +18,7 @@ import { socialLinks } from "../../scripts/dummy";
           socialLinks.map((link) => (
             <li>
               <a href={link.url} target="_blank" rel="noopener noreferrer">
-                <img src={link.icon} alt={link.name} class="w-6 h-6" />
+                <img src={link.icon} alt={link.name} class="w-6 h-6" loading="lazy" />
               </a>
             </li>
           ))

@@ -33,6 +33,7 @@ const { id } = Astro.props;
             <div class="col-span-1 md:col-span-1 py-2 md:py-0 order-2 md:order-2 flex justify-center md:block">
               <div class="timeline-wrapper h-full relative min-h-0 md:min-h-px">
                 <img
+                  loading="lazy"
                   src={project.companyImage}
                   alt={project.company}
                   class="w-8 h-8 absolute -top-2 md:-top-10 left-1/2 -translate-x-1/2 z-10 bg-card-bg rounded-full p-0.5"

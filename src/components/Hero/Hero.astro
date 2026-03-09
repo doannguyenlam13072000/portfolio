@@ -23,8 +23,9 @@ const { id } = Astro.props;
             <span class="text-highlight">Lam Doan</span>
           </h1>
 
-          <h1
-            class="text-xl md:text-2xl lg:text-4xl font-bold text-headline z-10"
+          <p
+            class="text-xl md:text-2xl lg:text-4xl font-bold text-headline z-10 m-0"
+            aria-label="I'm a Creative, Motivated, Innovative, Passionate Problem Solver and Team Player"
           >
             I'm
             <span class="text-highlight">
@@ -35,6 +36,7 @@ const { id } = Astro.props;
                       <span class="flex items-center gap-2 pb-2">
                         <span class="font-normal">{word.article}</span>
                         <img
+
                           class="xl:size-12 md:size-10 size-8"
                           src={word.image}
                           alt={word.text}
@@ -46,7 +48,7 @@ const { id } = Astro.props;
                 </span>
               </span>
             </span>
-          </h1>
+          </p>
         </div>
 
         <p
@@ -94,12 +96,12 @@ const { id } = Astro.props;
             <div class="btn__reflection-2"></div>
           </div>
 
-          <img src="images/star.png" alt="star" class="btn__star-1" />
-          <img src="images/star.png" alt="star" class="btn__star-2" />
-          <img src="images/circle.png" alt="circle" class="btn__circle-1" />
-          <img src="images/circle.png" alt="circle" class="btn__circle-2" />
-          <img src="images/triangle.png" alt="triangle" class="btn__triangle" />
-          <img src="images/diamond.png" alt="diamond" class="btn__diamond" />
+          <img src="images/star.png" alt="star" class="btn__star-1" loading="lazy" />
+          <img src="images/star.png" alt="star" class="btn__star-2" loading="lazy" />
+          <img src="images/circle.png" alt="circle" class="btn__circle-1" loading="lazy" />
+          <img src="images/circle.png" alt="circle" class="btn__circle-2" loading="lazy" />
+          <img src="images/triangle.png" alt="triangle" class="btn__triangle" loading="lazy" />
+          <img src="images/diamond.png" alt="diamond" class="btn__diamond" loading="lazy" />
 
           <div class="btn__shadow"></div>
         </a>
@@ -110,7 +112,8 @@ const { id } = Astro.props;
     <div class="col-span-12 md:col-span-6 order-1 md:order-2">
       <img
         src="images/hero-banner.svg"
-        alt="hero-image"
+        alt="Lam Doan, Full-stack Software Engineer - Portfolio illustration"
+        loading="lazy"
         class="w-full h-full object-cover"
       />
     </div>
