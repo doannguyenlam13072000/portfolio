@@ -42,7 +42,6 @@ export const backendSkills = [
     { name: "Express", image: "images/express.svg" },
     { name: "Spring Boot", image: "images/springboot.svg" },
     { name: "Laravel", image: "images/laravel.svg" },
-    { name: "Docker", image: "images/docker.svg" },
     { name: "Strapi", image: "images/strapi.svg" },
 ]
 
