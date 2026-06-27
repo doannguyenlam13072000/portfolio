@@ -22,10 +22,10 @@ export const words = [
 ];
 
 export const counters = [
-    { title: "Years of Experience", suffix: "+", value: 4 },
-    { title: "Projects Completed", suffix: "+", value: 7 },
+    { title: "Years of Experience", suffix: "+", value: 4.5 },
+    { title: "Projects Completed", suffix: "+", value: 9 },
     { title: "Clients Served", suffix: "+", value: 3000000 },
-    { title: "Markets Served", suffix: "+", value: 3 },
+    { title: "Markets Served", suffix: "+", value: 4 },
 ];
 
 export const frontendSkills = [
@@ -91,11 +91,29 @@ export const abilities = [
 
 export const projects = [
     {
+        company: "SENDO FARM",
+        position: "Frontend Engineer",
+        title: "Sendo Farm",
+        subtitle: "E-commerce Platform",
+        period: "05/2025 – Present",
+        description: "Large-scale social commerce and e-commerce platform serving the Vietnamese market, providing fresh food delivery, membership programs, promotional campaigns, and neighborhood pickup stations through App, Web and Zalo Mini App.",
+        responsibilities: [
+            "Delivered key e-commerce features, including D2D delivery, Station Pickup refactoring, and Membership Packages, improving the platform's ordering and customer experience.",
+            "Maintained the Micro Frontend architecture, led frontend rebranding initiatives, and managed the development and release of the Zalo Mini App.",
+            "Integrated Firebase Analytics for product tracking and owned deployment and release processes across web and Mini App platforms.",
+        ],
+        technologies: [
+            "React", "TypeScript", "SCSS", "Webpack", "Micro Frontend", "Firebase",
+        ],
+        companyImage: "images/circle-filled.svg",
+        icon: "images/stor-ai.svg"
+    },
+    {
         company: "MERCATUS",
         position: "Full-stack Engineer",
         title: "Stor.ai",
         subtitle: "Enterprise E-commerce Platform",
-        period: "04/2025 – Present",
+        period: "04/2025 – 04/2026",
         description: "Stor.ai is a large-scale enterprise e-commerce platform serving major retail chains across Israel, the US, and multiple international markets. The system provides an end-to-end e-commerce solution, from POS and inventory intake to ordering, promotions, and integrations with payment, delivery, and loyalty services.",
         responsibilities: [
             "Developed and maintained business-critical workflows, including order-related processes, delivery integrations, and operational CMS features for a large-scale e-commerce platform",
@@ -111,7 +129,7 @@ export const projects = [
         icon: "images/stor-ai.svg"
     },
     {
-        company: "Genki Tech Solutions",
+        company: "GENKI SYSTEM CORPORATION",
         position: "Frontend Engineer",
         title: "Yuzu",
         subtitle: "Product sales management for a Jpop band",
@@ -128,10 +146,10 @@ export const projects = [
         icon: "images/yuzu.svg"
     },
     {
-        company: "Genki Tech Solutions",
+        company: "GENKI SYSTEM CORPORATION",
         position: "Fullstack Engineer",
         title: "PTA",
-        subtitle: "Parent-Teacher Association",
+        subtitle: "Government Education System, Japan",
         period: "06/2024 – 01/2025",
         description: "PTA is a nationwide system supporting communication and relationship management between schools and parent–teacher associations in Japan, developed for government-related education use.",
         responsibilities: [
@@ -149,7 +167,7 @@ export const projects = [
         icon: "images/pta.svg"
     },
     {
-        company: "Genki Tech Solutions",
+        company: "GENKI SYSTEM CORPORATION",
         position: "Frontend Engineer",
         title: "EMLINX",
         period: "04/2024 – 06/2025",
@@ -166,7 +184,7 @@ export const projects = [
         icon: "images/emlinx.svg"
     },
     {
-        company: "Genki Tech Solutions",
+        company: "GENKI SYSTEM CORPORATION",
         position: "Fullstack Engineer",
         title: "AIdaBot",
         subtitle: "AI-powered Q&A & Document Intelligence Platform",
@@ -187,15 +205,15 @@ export const projects = [
         icon: "images/aidabot.svg"
     },
     {
-        company: "Genki Tech Solutions",
+        company: "GENKI SYSTEM CORPORATION",
         position: "Fullstack Engineer",
         title: "PMS",
-        subtitle: "Property Management System - Smart Hotel & Facial Recognition Platform",
+        subtitle: "Smart Hotel & Facial Recognition Platform",
         period: "12/2021 – 11/2023",
-        description: "PMS is a smart hotel management system designed for contactless operations during the COVID-19 period, enabling unmanned hotel workflows through facial recognition–based check-in and service usage. The platform integrates with most major OTA providers, like Booking.com and Agoda, and supports area-based service management",
+        description: "PMS is a smart hotel management system designed for contactless operations during the COVID-19 period, enabling unmanned hotel workflows through facial recognition–based check-in and service usage. The platform integrates with most major OTA providers, like Booking.com and Agoda, and supports area-based service management.",
         responsibilities: [
             "Developed and maintained a smart hotel management platform enabling contactless, unmanned operations for enterprise clients in Japan, covering reservations, check-in workflows, and on-site services.",
-            "Played a key role in designing and implementing facial recognition–based check-in systems, including end-to-end UI and backend workflows for iPad devices environments.",
+            "Played a key role in designing and implementing facial recognition–based check-in systems, including end-to-end UI and backend workflows for iPad devices and kiosk environments.",
             "Integrated OCR and facial recognition into the check-in flow, significantly reducing manual input and on-site staff workload.",
             "Implemented and optimized AWS Rekognition, improving facial recognition accuracy by approximately 90% compared to the previous solution.",
             "Optimized backend APIs for reservation and check-in flows, reducing response time by around 20% in critical user journeys.",
@@ -208,16 +226,17 @@ export const projects = [
         icon: "images/pms.svg"
     },
     {
-        company: "CYBERDINO (Freelance)",
-        position: "Fullstack Engineer",
+        company: "CYBERDINO",
+        position: "Freelance Full-stack Engineer",
         title: "Nhat Quang Edu Game",
         subtitle: "AI-assisted Career Orientation Platform",
-        period: "06/2024 – 12/2024",
+        period: "06/2024 – 11/2024",
         description: "Nhat Quang Edu Game is an educational simulation platform that evaluates users through interactive challenges to provide career orientation, with AI-assisted tools for generating tasks and missions based on industry trends.",
         responsibilities: [
-            "Contributed to the development and debugging of ReactJS application with Material UI.",
-            "Built a Line Chat integration feature.",
-            "Improved user experience.",
+            "Developed an educational simulation platform for career orientation, using structured assessments and AI-assisted recommendations to guide users toward suitable career paths.",
+            "Designed and built interactive user interfaces with React and TypeScript, focusing on usability, responsiveness, and performance.",
+            "Implemented AI-assisted logic and backend data workflows to support questionnaire evaluation and career recommendations.",
+            "Integrated third-party services such as ReadyPlayer.me for 3D avatar customization, enhancing user engagement and personalization.",
         ],
         technologies: [
             "React.js", "TypeScript", "React Query", "Ant Design", "Tailwind CSS", "Strapi", "PostgreSQL", "Gemini API", "OpenAI API"
@@ -226,16 +245,20 @@ export const projects = [
         icon: "images/nhatquang.svg"
     },
     {
-        company: "Freelancer",
-        position: "Fullstack Engineer",
-        title: "HR-Lotus",
+        company: "FREELANCER",
+        position: "Full-stack Engineer",
+        title: "HR Lotus",
         subtitle: "Human Resource Management System (Healthcare)",
-        period: "06/2025 – 12/2025",
-        description: "HR Lotus is a hospital-focused HR management system supporting staff management, task assignment, payroll calculation, and workflow tracking.",
+        period: "06/2025 – Present",
+        description: "HR Lotus is a healthcare-focused human resource management platform designed for hospitals and care providers. The system streamlines workforce management while supporting patient care planning, operational workflows, and caregiver collaboration.",
         responsibilities: [
-            "Contributed to the development and debugging of ReactJS application with Material UI.",
-            "Built a Line Chat integration feature.",
-            "Improved user experience.",
+            "Developed a healthcare-focused HR management system supporting administrators, support workers, and clients.",
+            "Designed and implemented core HR workflows, including staff management, task assignment, payroll calculation, and operational tracking.",
+            "Built the Leave Request module, enabling employees and managers to submit, approve, and track leave requests through configurable approval workflows.",
+            "Developed the Daily Care Plan feature, allowing caregivers to create personalized daily care schedules for patients.",
+            "Implemented task management workflows within Daily Care Plans to help caregivers monitor patient health conditions, treatment progress, and daily activities.",
+            "Designed and developed backend services and RESTful APIs using Node.js and TypeScript.",
+            "Deployed and maintained the application in a Docker-based VPS environment.",
         ],
         technologies: [
             "Vue 3", "TypeScript", "Vue Query", "Element+", "Tailwind CSS", "Node.js (Express)", "PostgreSQL", "Docker"
